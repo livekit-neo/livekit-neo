@@ -1,0 +1,18 @@
+[package]
+name = "livekit-feed-stor-raw"
+version = "0.5.0"
+edition = "2024"
+authors = ["stackinspector"]
+license = "MPL-2.0"
+repository = "https://github.com/livekit-neo/livekit-neo"
+
+[lib]
+name = "livekit_feed_stor_raw"
+path = "lib.rs"
+
+[dependencies]
+bytes = "1"
+crc32fast = "1"
+foundations = { git = "https://github.com/Berylsoft/foundations", features = ["byterepr", "byterepr-macros"] }
+kv-storage = { git = "https://github.com/Berylsoft/kv-storage", features = ["auto-domain-id"] }
+livekit-feed-base = { path = "../feed-base" }
